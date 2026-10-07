@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="pt-BR" data-lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gabriel Carvalho | Portfólio · Engenharia da Computação</title>
+<meta name="description" content="Portfólio de Gabriel Carvalho, estudante de Engenharia da Computação: projetos, formação e habilidades.">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Gabriel Carvalho | Portfólio">
+<meta property="og:description" content="Estudante de Engenharia da Computação. Projetos, formação e habilidades.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%2308080a'/%3E%3Crect x='7' y='7' width='10' height='10' fill='none' stroke='%23f5f5f3' stroke-width='1.6'/%3E%3Cpath d='M10 4v3M14 4v3M10 17v3M14 17v3M4 10h3M4 14h3M17 10h3M17 14h3' stroke='%23d4a64a' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<!-- Define o idioma antes de pintar a página (evita "piscar") -->
+<script>
+(function () {
+  var r = document.documentElement, l;
+  r.classList.add('js');
+  try { l = localStorage.getItem('lang'); } catch (e) {}
+  if (l !== 'pt' && l !== 'en') l = /^pt/i.test(navigator.language || '') ? 'pt' : 'en';
+  r.setAttribute('data-lang', l);
+  r.lang = l === 'pt' ? 'pt-BR' : 'en';
+  setTimeout(function () { r.classList.add('go'); }, 2500);
+})();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Ícones (usados com <svg class="ico"><use href="#i-nome"/></svg>) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></symbol>
+  <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="1.5"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M9 2.5V6M15 2.5V6M9 18v3.5M15 18v3.5M2.5 9H6M2.5 15H6M18 9h3.5M18 15h3.5"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v13c0 1.7 3.6 3 8 3s8-1.3 8-3v-13M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.7-3.2 8-8 9.5C7.2 20 4 16.7 4 12V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 5a3.2 3.2 0 010 6M21 20c0-2.6-1.4-4.7-3.4-5.6"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 9.5L12 5 2 9.5 12 14z"/><path d="M6 11.8V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.2M22 9.5V15"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.6 14l-1.4 7.5L12 19l4.8 2.5L15.4 14"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3.5v12M7 11l5 5 5-5M4 20.5h16"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 012-2h9"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2M3 13h18"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
+  <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 9v11"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+</svg>
+
+<a class="skip" href="#sobre"><span class="pt">Ir para o conteúdo</span><span class="en">Skip to content</span></a>
+<canvas id="circuit" aria-hidden="true"></canvas>
+
+<!-- ===================== CABEÇALHO ===================== -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#topo" aria-label="Gabriel Carvalho">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 4v3M14 4v3M10 17v3M14 17v3M4 10h3M4 14h3M17 10h3M17 14h3" stroke="#d4a64a" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="9.5" r=".9" fill="currentColor"/></svg>
+      <span>Gabriel Carvalho</span>
+    </a>
+    <div class="nav-end">
+      <nav class="nav-links" aria-label="Principal">
+        <a href="#sobre"><span class="pt">Sobre</span><span class="en">About</span></a>
+        <a href="#portfolio"><span class="pt">Portfólio</span><span class="en">Portfolio</span></a>
+        <a href="#contato"><span class="pt">Contato</span><span class="en">Contact</span></a>
+      </nav>
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-set-lang="pt" aria-pressed="true">PT</button>
+        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Trilho lateral: mostra quanto da página você já percorreu -->
+<nav class="rail" id="rail" aria-label="Seções / Sections">
+  <span class="rail-line"></span><span class="rail-fill"></span>
+  <a href="#topo" data-sec="topo"><i></i><span class="lbl"><span class="pt">Início</span><span class="en">Top</span></span></a>
+  <a href="#sobre" data-sec="sobre"><i></i><span class="lbl"><span class="pt">Sobre</span><span class="en">About</span></span></a>
+  <a href="#portfolio" data-sec="portfolio"><i></i><span class="lbl"><span class="pt">Portfólio</span><span class="en">Portfolio</span></span></a>
+  <a href="#contato" data-sec="contato"><i></i><span class="lbl"><span class="pt">Contato</span><span class="en">Contact</span></span></a>
+</nav>
+
+<main>
+
+  <!-- ===================== INÍCIO ===================== -->
+  <section class="hero" id="topo">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="status intro" style="--at:.35s"><i></i>
+          <span class="pt">Aberto a estágio e oportunidades</span>
+          <span class="en">Open to internships and opportunities</span>
+        </p>
+
+        <h1 class="name" id="name" aria-label="Gabriel Carvalho">
+          <span class="ln" aria-hidden="true">Gabriel</span>
+          <span class="ln" aria-hidden="true">Carvalho</span>
+        </h1>
+
+        <p class="role intro" style="--at:.8s">
+          <span class="pt">Estudante de Engenharia da Computação</span>
+          <span class="en">Computer Engineering student</span>
+        </p>
+        <p class="lead intro" style="--at:.95s">
+          <span class="pt">Aprendo na prática como hardware e software se encontram, de microcontroladores a bancos de dados, e procuro minha primeira oportunidade em TI.</span>
+          <span class="en">I'm learning how hardware and software meet, from microcontrollers to databases, and I'm looking for my first opportunity in IT.</span>
+        </p>
+      </div>
+
+      <div class="hero-visual">
+        <figure class="portrait intro" style="--at:.5s">
+          <div class="portrait-frame"><img id="photo" src="assets/foto.webp" alt="Foto de Gabriel Carvalho" width="780" height="1040"></div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOBRE ===================== -->
+  <section class="section" id="sobre">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span class="pt">Sobre mim</span><span class="en">About me</span></h2>
+      </div>
+
+      <div class="about">
+        <div class="about-text">
+          <p class="about-lead">
+            <span class="pt">Estou construindo minha base em programação, microprocessadores e bancos de dados.</span>
+            <span class="en">I'm building my foundation in programming, microprocessors and databases.</span>
+          </p>
+          <p>
+            <span class="pt">Sou estudante de Engenharia da Computação na FAM e estou no início da carreira em TI. Coloco o que aprendo em prática em projetos como um display de 7 segmentos com Raspberry Pi Pico e um banco de dados MySQL para uma loja de bebidas.</span>
+            <span class="en">I'm a Computer Engineering student at FAM, at the start of my IT career. I put what I learn into practice in projects such as a 7-segment display with a Raspberry Pi Pico and a MySQL database for a beverage store.</span>
+          </p>
+          <p>
+            <span class="pt">Também fiz cursos de Cyber Security, Informática Básica e Operador de Microcomputador no SENAI. Sou responsável, disciplinado e comprometido, com facilidade para aprender novas ferramentas e colaborar em equipe.</span>
+            <span class="en">I also took Cyber Security, Basic Computing and Microcomputer Operator courses at SENAI. I'm responsible, disciplined and committed, and I pick up new tools easily and collaborate well in a team.</span>
+          </p>
+          <p>
+            <span class="pt">Meu objetivo é iniciar minha trajetória profissional em TI, aplicando o que aprendo e contribuindo com a equipe.</span>
+            <span class="en">My goal is to start my professional path in IT, applying what I learn and contributing to the team.</span>
+          </p>
+        </div>
+
+        <ul class="panel facts">
+          <li>
+            <svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>
+            <div><span class="k"><span class="pt">Local</span><span class="en">Location</span></span><span class="v">Diadema, SP, Brasil</span></div>
+          </li>
+          <li>
+            <svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg>
+            <div><span class="k"><span class="pt">Idiomas</span><span class="en">Languages</span></span><span class="v"><span class="pt">Português (nativo), Inglês (em andamento)</span><span class="en">Portuguese (native), English (in progress)</span></span></div>
+          </li>
+          <li>
+            <svg class="ico" aria-hidden="true"><use href="#i-target"/></svg>
+            <div><span class="k"><span class="pt">Objetivo</span><span class="en">Goal</span></span><span class="v"><span class="pt">Primeira oportunidade em TI</span><span class="en">First opportunity in IT</span></span></div>
+          </li>
+          <li class="quiet">
+            <svg class="ico" aria-hidden="true"><use href="#i-briefcase"/></svg>
+            <div><span class="k"><span class="pt">Antes</span><span class="en">Before</span></span><span class="v"><span class="pt">Designer gráfico na Gráfica Exprescard, 2023 a 2025</span><span class="en">Graphic designer at Gráfica Exprescard, 2023 to 2025</span></span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PORTFÓLIO ===================== -->
+  <section class="section" id="portfolio">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span class="pt">Portfólio</span><span class="en">Portfolio</span></h2>
+        <p>
+          <span class="pt">Projetos, formação e as habilidades que estou desenvolvendo.</span>
+          <span class="en">Projects, education and the skills I'm developing.</span>
+        </p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Portfólio">
+        <span class="tab-ind" aria-hidden="true"></span>
+        <button type="button" class="tab" role="tab" id="tab-projetos" aria-controls="panel-projetos" aria-selected="true"><svg class="ico" aria-hidden="true"><use href="#i-folder"/></svg><span><span class="pt">Projetos</span><span class="en">Projects</span></span></button>
+        <button type="button" class="tab" role="tab" id="tab-formacao" aria-controls="panel-formacao" aria-selected="false" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="#i-cap"/></svg><span><span class="pt">Formação</span><span class="en">Education</span></span></button>
+        <button type="button" class="tab" role="tab" id="tab-habilidades" aria-controls="panel-habilidades" aria-selected="false" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg><span><span class="pt">Habilidades</span><span class="en">Skills</span></span></button>
+      </div>
+
+      <!-- ================= PROJETOS =================
+           COMO ADICIONAR UM PROJETO: copie o modelo abaixo, cole depois do último
+           <article ...> (antes do </div> que fecha a lista) e troque os textos.
+           Para mostrar os links, apague a palavra hidden e coloque o endereço no href.
+           Ícones disponíveis: i-cpu, i-db, i-layout, i-code, i-globe, i-folder.
+
+        MODELO:
+          <article class="panel project">
+            <div class="project-head">
+              <span class="icon-box sm"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg></span>
+              <h3><span class="pt">Nome do projeto</span><span class="en">Project name</span></h3>
+            </div>
+            <p>
+              <span class="pt">Descrição em português.</span>
+              <span class="en">Description in English.</span>
+            </p>
+            <div class="tags"><span class="smd">Tecnologia 1</span><span class="smd">Tecnologia 2</span></div>
+            <div class="links">
+              <a href="https://seu-link" target="_blank" rel="noopener"><span class="pt">Ver projeto</span><span class="en">View project</span></a>
+            </div>
+          </article>
+      -->
+      <div role="tabpanel" id="panel-projetos" aria-labelledby="tab-projetos">
+        <div class="projects">
+
+          <article class="panel project featured">
+            <div class="project-main">
+              <div class="project-head">
+                <span class="icon-box sm"><svg class="ico" aria-hidden="true"><use href="#i-cpu"/></svg></span>
+                <h3><span class="pt">Display de 7 segmentos com Raspberry Pi Pico</span><span class="en">7-segment display with Raspberry Pi Pico</span></h3>
+              </div>
+              <p>
+                <span class="pt">Display de dois dígitos controlado por uma Raspberry Pi Pico, simulado no Wokwi e programado em MicroPython. Ao lado há uma versão interativa: use os botões ou clique nos segmentos para acendê-los.</span>
+                <span class="en">A two-digit display driven by a Raspberry Pi Pico, simulated in Wokwi and programmed in MicroPython. Next to it is an interactive version: use the buttons or click the segments to light them.</span>
+              </p>
+              <div class="tags">
+                <span class="smd">MicroPython</span><span class="smd">Raspberry Pi Pico</span><span class="smd">Wokwi</span><span class="smd">GPIO</span>
+              </div>
+              <div class="links">
+                <a href="#" target="_blank" rel="noopener" hidden><span class="pt">Ver simulação</span><span class="en">View simulation</span></a>
+                <a href="#" target="_blank" rel="noopener" hidden><span class="pt">Ver código</span><span class="en">View code</span></a>
+              </div>
+            </div>
+
+            <div class="seg-demo">
+              <svg class="seg-svg" id="segSvg" viewBox="0 0 176 124" role="img" aria-label="Display de sete segmentos com dois dígitos"></svg>
+              <div class="seg-controls">
+                <button type="button" data-seg="dec"><span aria-hidden="true">−</span><span class="sr"><span class="pt">Diminuir</span><span class="en">Decrease</span></span></button>
+                <button type="button" data-seg="inc"><span aria-hidden="true">+</span><span class="sr"><span class="pt">Aumentar</span><span class="en">Increase</span></span></button>
+                <button type="button" id="segAuto" aria-pressed="false">
+                  <span class="st-off"><span class="pt">Contar</span><span class="en">Count</span></span>
+                  <span class="st-on"><span class="pt">Pausar</span><span class="en">Pause</span></span>
+                </button>
+                <button type="button" data-seg="reset"><span class="pt">Zerar</span><span class="en">Reset</span></button>
+              </div>
+              <p class="seg-readout" aria-live="polite">
+                <span><span class="pt">Dezena</span><span class="en">Tens</span>: <b id="rd0"></b></span>
+                <span><span class="pt">Unidade</span><span class="en">Ones</span>: <b id="rd1"></b></span>
+              </p>
+            </div>
+          </article>
+
+          <article class="panel project">
+            <div class="project-head">
+              <span class="icon-box sm"><svg class="ico" aria-hidden="true"><use href="#i-db"/></svg></span>
+              <h3>DrinkDepot</h3>
+            </div>
+            <p>
+              <span class="pt">Banco de dados MySQL de uma loja de bebidas, criado no XAMPP e visualizado no MySQL Workbench. Projeto da faculdade, com acesso compartilhado entre colegas.</span>
+              <span class="en">MySQL database for a beverage store, built on XAMPP and explored in MySQL Workbench. A university project with access shared among classmates.</span>
+            </p>
+            <div class="tags">
+              <span class="smd">MySQL</span><span class="smd">XAMPP</span><span class="smd">MySQL Workbench</span>
+            </div>
+            <div class="links">
+              <a href="#" target="_blank" rel="noopener" hidden><span class="pt">Ver código</span><span class="en">View code</span></a>
+            </div>
+          </article>
+
+          <article class="panel project">
+            <div class="project-head">
+              <span class="icon-box sm"><svg class="ico" aria-hidden="true"><use href="#i-layout"/></svg></span>
+              <h3><span class="pt">Site de portfólio para uma gráfica</span><span class="en">Portfolio site for a print shop</span></h3>
+            </div>
+            <p>
+              <span class="pt">Site para uma gráfica pequena, minha primeira cliente. Mostra trabalhos, materiais e valores, com link para o Instagram e botão de WhatsApp.</span>
+              <span class="en">Website for a small print shop, my first client. It shows their work, materials and pricing, with an Instagram link and a WhatsApp button.</span>
+            </p>
+            <div class="tags">
+              <span class="smd">Web</span><span class="smd"><span class="pt">Cliente real</span><span class="en">Real client</span></span>
+            </div>
+            <div class="links">
+              <a href="#" target="_blank" rel="noopener" hidden><span class="pt">Ver site</span><span class="en">View site</span></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ================= FORMAÇÃO =================
+           Para ligar o PDF de um certificado: apague "hidden" do link e coloque o arquivo no href
+           (ex.: certificados/cyber.pdf). -->
+      <div role="tabpanel" id="panel-formacao" aria-labelledby="tab-formacao" hidden>
+        <div class="edu">
+
+          <article class="panel edu-main">
+            <span class="icon-box"><svg class="ico" aria-hidden="true"><use href="#i-cap"/></svg></span>
+            <div>
+              <h3><span class="pt">Engenharia da Computação</span><span class="en">Computer Engineering</span></h3>
+              <p class="by">FAM – Centro Universitário das Américas</p>
+              <p class="since"><span class="pt">Cursando desde 2026</span><span class="en">Enrolled since 2026</span></p>
+              <div class="tags">
+                <span class="smd"><span class="pt">Programação</span><span class="en">Programming</span></span>
+                <span class="smd"><span class="pt">Microprocessadores</span><span class="en">Microprocessors</span></span>
+                <span class="smd"><span class="pt">Bancos de dados</span><span class="en">Databases</span></span>
+              </div>
+            </div>
+          </article>
+
+          <div class="panel">
+            <h3 class="sub-head"><svg class="ico" aria-hidden="true"><use href="#i-award"/></svg><span class="pt">Cursos e certificados</span><span class="en">Courses and certificates</span></h3>
+
+            <div class="row">
+              <h3><svg class="ico" aria-hidden="true"><use href="#i-award"/></svg><span class="pt">Inglês</span><span class="en">English</span></h3>
+              <p class="by">Kultivi · 90 h</p>
+              <p class="when live"><span class="pt">Em andamento, até Dez 2026</span><span class="en">In progress, until Dec 2026</span></p>
+            </div>
+            <div class="row">
+              <h3><svg class="ico" aria-hidden="true"><use href="#i-award"/></svg>Cyber Security</h3>
+              <p class="by">SENAI-SP · 80 h</p>
+              <p class="when"><span class="pt">Fev 2024</span><span class="en">Feb 2024</span> <a class="cert-link" href="#" target="_blank" rel="noopener" hidden><span class="pt">Ver</span><span class="en">View</span></a></p>
+            </div>
+            <div class="row">
+              <h3><svg class="ico" aria-hidden="true"><use href="#i-award"/></svg><span class="pt">Operador de Microcomputador</span><span class="en">Microcomputer Operator</span></h3>
+              <p class="by">SENAI Manuel Garcia Filho · 160 h</p>
+              <p class="when"><span class="pt">Nov 2023</span><span class="en">Nov 2023</span> <a class="cert-link" href="#" target="_blank" rel="noopener" hidden><span class="pt">Ver</span><span class="en">View</span></a></p>
+            </div>
+            <div class="row">
+              <h3><svg class="ico" aria-hidden="true"><use href="#i-award"/></svg><span class="pt">Informática Básica</span><span class="en">Basic Computing</span></h3>
+              <p class="by">SENAI Manuel Garcia Filho · 60 h</p>
+              <p class="when"><span class="pt">Mai 2023</span><span class="en">May 2023</span> <a class="cert-link" href="#" target="_blank" rel="noopener" hidden><span class="pt">Ver</span><span class="en">View</span></a></p>
+            </div>
+            <div class="row quiet">
+              <h3><svg class="ico" aria-hidden="true"><use href="#i-cap"/></svg><span class="pt">Ensino Médio</span><span class="en">High school</span></h3>
+              <p class="by"><span class="pt">Concluído</span><span class="en">Completed</span></p>
+              <p class="when"><span class="pt">Dez 2025</span><span class="en">Dec 2025</span></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================= HABILIDADES ================= -->
+      <div role="tabpanel" id="panel-habilidades" aria-labelledby="tab-habilidades" hidden>
+        <div class="skills">
+
+          <article class="panel skill">
+            <span class="icon-box"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg></span>
+            <h3><span class="pt">Programação</span><span class="en">Programming</span></h3>
+            <p><span class="pt">Lógica e código para controlar dispositivos e criar sites.</span><span class="en">Logic and code to control devices and build websites.</span></p>
+            <div class="tags"><span class="smd">MicroPython</span><span class="smd"><span class="pt">Desenvolvimento web</span><span class="en">Web development</span></span></div>
+          </article>
+
+          <article class="panel skill">
+            <span class="icon-box"><svg class="ico" aria-hidden="true"><use href="#i-cpu"/></svg></span>
+            <h3><span class="pt">Hardware e embarcados</span><span class="en">Hardware and embedded</span></h3>
+            <p><span class="pt">Programação de microcontroladores e simulação de circuitos.</span><span class="en">Microcontroller programming and circuit simulation.</span></p>
+            <div class="tags"><span class="smd">Raspberry Pi Pico</span><span class="smd">GPIO</span><span class="smd">Wokwi</span></div>
+          </article>
+
+          <article class="panel skill">
+            <span class="icon-box"><svg class="ico" aria-hidden="true"><use href="#i-db"/></svg></span>
+            <h3><span class="pt">Banco de dados</span><span class="en">Databases</span></h3>
+            <p><span class="pt">Criação e visualização de bancos de dados com MySQL.</span><span class="en">Creating and exploring databases with MySQL.</span></p>
+            <div class="tags"><span class="smd">MySQL</span><span class="smd">MySQL Workbench</span><span class="smd">XAMPP</span></div>
+          </article>
+
+          <article class="panel skill">
+            <span class="icon-box"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <h3><span class="pt">Suporte e segurança</span><span class="en">Support and security</span></h3>
+            <p><span class="pt">Manutenção de computadores, atendimento técnico e base em segurança da informação.</span><span class="en">Computer maintenance, technical support and a foundation in information security.</span></p>
+            <div class="tags">
+              <span class="smd"><span class="pt">Suporte técnico</span><span class="en">Technical support</span></span>
+              <span class="smd"><span class="pt">Manutenção de PCs e notebooks</span><span class="en">PC and laptop maintenance</span></span>
+              <span class="smd">Cyber Security</span>
+            </div>
+          </article>
+
+          <article class="panel skill">
+            <span class="icon-box"><svg class="ico" aria-hidden="true"><use href="#i-monitor"/></svg></span>
+            <h3><span class="pt">Ferramentas</span><span class="en">Tools</span></h3>
+            <p><span class="pt">Sistemas e programas que uso no dia a dia.</span><span class="en">Systems and software I use day to day.</span></p>
+            <div class="tags"><span class="smd">Windows</span><span class="smd">Word</span><span class="smd">Excel</span><span class="smd">PowerPoint</span><span class="smd">Outlook</span><span class="smd">Teams</span><span class="smd">CorelDraw</span></div>
+          </article>
+
+          <article class="panel skill">
+            <span class="icon-box"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></span>
+            <h3><span class="pt">Comportamentais</span><span class="en">Soft skills</span></h3>
+            <p><span class="pt">Como eu trabalho com as pessoas.</span><span class="en">How I work with people.</span></p>
+            <div class="tags">
+              <span class="smd"><span class="pt">Trabalho em equipe</span><span class="en">Teamwork</span></span>
+              <span class="smd"><span class="pt">Comunicação</span><span class="en">Communication</span></span>
+              <span class="smd"><span class="pt">Proatividade</span><span class="en">Proactivity</span></span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTATO ===================== -->
+  <section class="section" id="contato">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <h2><span class="pt">Vamos conversar?</span><span class="en">Let's talk?</span></h2>
+          <p class="contact-intro">
+            <span class="pt">Estou começando na área e procuro oportunidades para aprender e contribuir. Escreva pelo formulário ou copie meu e-mail.</span>
+            <span class="en">I'm just starting out and looking for opportunities to learn and contribute. Write through the form or copy my email.</span>
+          </p>
+          <div class="channels">
+            <button type="button" class="copy-mail" id="copyMail">
+              <svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>
+              <span id="mailText">gabrielteixeira2615@gmail.com</span>
+              <small><svg class="ico" aria-hidden="true"><use href="#i-copy"/></svg><span class="pt">Copiar</span><span class="en">Copy</span></small>
+            </button>
+          </div>
+        </div>
+
+        <form class="panel" id="contactForm">
+          <div class="field">
+            <label for="f-name"><span class="pt">Nome</span><span class="en">Name</span></label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required data-ph-pt="Como posso te chamar?" data-ph-en="What should I call you?">
+          </div>
+          <div class="field">
+            <label for="f-email">E-mail</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" data-ph-pt="seu@email.com" data-ph-en="you@email.com">
+          </div>
+          <div class="field">
+            <label for="f-msg"><span class="pt">Mensagem</span><span class="en">Message</span></label>
+            <textarea id="f-msg" name="message" required data-ph-pt="Escreva sua mensagem" data-ph-en="Write your message"></textarea>
+          </div>
+          <button class="btn primary" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg><span class="pt">Enviar mensagem</span><span class="en">Send message</span></button>
+          <p class="form-note">
+            <span class="pt">Abre o seu app de e-mail com a mensagem pronta para enviar.</span>
+            <span class="en">Opens your email app with the message ready to send.</span>
+          </p>
+        </form>
+      </div>
+
+      <!-- Bloco final: botões e QR code -->
+      <div class="finale">
+        <div class="panel finale-panel">
+          <div>
+            <h3><span class="pt">Currículo e redes</span><span class="en">Résumé and links</span></h3>
+            <p>
+              <span class="pt">Baixe meu currículo ou conecte-se comigo no LinkedIn.</span>
+              <span class="en">Download my résumé or connect with me on LinkedIn.</span>
+            </p>
+            <div class="cta">
+              <a class="btn primary" href="curriculo-gabriel-carvalho.pdf" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg><span class="pt">Baixar currículo</span><span class="en">Download résumé</span></a>
+              <a class="btn" href="https://www.linkedin.com/in/gabriel-carvalho-388a1a30b" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
+              <!-- Quando criar seu GitHub: apague "hidden" e troque SEU-USUARIO -->
+              <a class="btn" href="https://github.com/SEU-USUARIO" target="_blank" rel="noopener" hidden><svg class="ico" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+              <a class="btn" href="#portfolio"><svg class="ico" aria-hidden="true"><use href="#i-folder"/></svg><span class="pt">Ver projetos</span><span class="en">View projects</span></a>
+            </div>
+          </div>
+          <figure class="qr">
+            <div class="qr-card"><img id="qrImg" src="assets/qr.svg" alt="QR code do LinkedIn de Gabriel Carvalho" width="156" height="156"></div>
+            <figcaption><span class="pt">Escaneie para abrir meu LinkedIn</span><span class="en">Scan to open my LinkedIn</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Gabriel Jefferson T. de Carvalho</span>
+    <button type="button" id="toTop"><svg class="ico" aria-hidden="true"><use href="#i-up"/></svg><span class="pt">Voltar ao topo</span><span class="en">Back to top</span></button>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="circuit.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
